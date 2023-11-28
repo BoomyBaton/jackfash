@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackfash</title>
+    <link rel="icon" type="image/x-icon" href="JF.webp">
+    <link rel="stylesheet" href="jackfash.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Jackfash</h1>
+            <nav>
+                <button onclick="filterCategory('all')">All</button>
+                <button onclick="filterCategory('Tröjor')">Tröjor</button>
+                <button onclick="filterCategory('Byxor')">Byxor</button>
+                <button onclick="filterCategory('Skor')">Skor</button>
+                <button onclick="filterCategory('accessories')">Accessories</button>
+            </nav>
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+        </header>
+
+        <main>
+            <div class="product col-2" data-category="Tröjor" data-name="product1">
+                <img src="valpar1.jpg" alt="Product 1">
+                <div class="product-info">
+                    <h2>Product 1</h2>
+
+                    <p class="price">$Price1</p>
+                    <!-- Inside your product block -->
+                    <a href="#" class="btn-buy" onclick="redirectToBuyPage('productId')">Buy Now</a>
+
+                    <a href="#" class="btn-quality">Quality Check</a>
+                </div>
+            </div>
+
+                <!-- Add more products here -->
+                <div class="product col-2" data-category="Tröjor" data-name="valpar2">
+                    <img src="valpar2.jpg" alt="Product 2">
+                    <div class="product-info">
+                        <h2>valpar2</h2>
+
+                        <p class="price">20 000 :-</p>
+                        <!-- Inside your product block -->
+                        <a href="#" class="btn-buy" onclick="redirectToBuyPage('productId')">Buy Now</a>
+
+                        <a href="#" class="btn-quality">Quality Check</a>
+                    </div>
+
+
+
+                </div>
+        </main> <!-- Repeat this block for each product -->
+        <!-- Example Product -->
+
+
+        <script src="javascript.js"></script>
+</body>
+
+</html>
