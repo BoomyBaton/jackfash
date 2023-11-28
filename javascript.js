@@ -47,3 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100 * (index + 1));
     });
 });
+function filterProducts(searchTerm = '', category = 'all') {
+    let products = document.getElementsByClassName('product');
+
+    for (let product of products) {
+        let title = product.dataset.name.toUpperCase();
+        let prodCategory = product.dataset.category;
+
+        if ((title.indexOf(searchTerm) > -1 || searchTerm === '') &&
+            (category === 'all' || prodCategory === category)) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
+    }
+}
