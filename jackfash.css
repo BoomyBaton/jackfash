@@ -57,7 +57,12 @@ main{
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-}
+    width: 250px;  /* Set to your preferred width */
+    height: 250px; /* Set to your preferred height */
+    object-fit: cover; /* Ensures images are scaled correctly */
+    }
+    
+
 
 .btn-buy, .btn-quality {
     display: inline-block;
