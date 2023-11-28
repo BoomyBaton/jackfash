@@ -55,8 +55,8 @@ main {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    width: 250px;  /* Preferred width */
-    height: 250px; /* Preferred height */
+    width: 200px;  /* Preferred width */
+    height: 200px; /* Preferred height */
     object-fit: cover;
 }
 
@@ -106,18 +106,6 @@ nav button:hover {
     transform: scale(1.9);
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    main, .product-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
     main, .product-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -131,7 +119,6 @@ nav button:hover {
         padding: 8px;
         font-size: 14px;
     }
-}
 
 /* Additional Styles */
 .home-button {
@@ -155,4 +142,17 @@ nav button:hover {
 
 #sbody {
     background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    main, .product-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
 }
