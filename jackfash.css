@@ -1,13 +1,33 @@
-* {
+*{
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 768px) {
+        main, .product-gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+@media screen and (max-width: 480px) {
+        body {
+            font-size: 14px;
+        }
+    }
+
+
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Assuming you want this as the global background */
     margin: 0;
     padding: 0;
     color: #333;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+
 }
 
 .container {
@@ -21,7 +41,6 @@ body {
     margin-bottom: 20px;
     font-size: 2em;
 }
-
 #searchInput {
     padding: 10px;
     width: 300px;
@@ -29,14 +48,9 @@ body {
     font-size: 16px;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
 .product-gallery {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6,1fr);
     gap: 20px;
 }
 
@@ -49,15 +63,14 @@ main {
     padding: 10px;
     text-align: center;
     margin-top: 5rem;
+    
+
 }
 
 .product img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    width: 200px;  /* Preferred width */
-    height: 200px; /* Preferred height */
-    object-fit: cover;
 }
 
 .btn-buy, .btn-quality {
@@ -91,7 +104,6 @@ nav button {
 nav button:hover {
     background-color: #555;
 }
-
 .social-links a {
     margin: 0 10px;
     display: inline-block;
@@ -105,23 +117,28 @@ nav button:hover {
 .social-icon:hover {
     transform: scale(1.9);
 }
+.social-icon {
+    transition: transform 0.3s ease;
+}
 
-    main, .product-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Specific styles for Snapchat icon */
+.snapchat-icon {
+    width: 500px; /* Set your desired size */
+    height: 500px; /* Maintain aspect ratio */
+}
 
-    .btn-buy, .btn-quality {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+/* Specific styles for Instagram icon */
+.instagram-icon {
+    width: 500px; /* Set your desired size */
+    height: 500px; /* Maintain aspect ratio */
+}
 
-    nav button {
-        padding: 8px;
-        font-size: 14px;
-    }
+.social-icon:hover {
+    transform: scale(1.5); /* Slightly enlarge icons on hover */
+    cursor: pointer;
+}
 
-
-/* Additional Styles */
+/* Continue with the rest of your styles */
 .home-button {
     position: absolute;
     top: 20px;
@@ -138,22 +155,9 @@ nav button:hover {
 }
 
 .home-button a:hover {
-    background-color: #535353;
+    background-color: #535353; /* Slightly darker on hover */
 }
 
 #sbody {
     background-color: #ffffff;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    main, .product-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
 }
