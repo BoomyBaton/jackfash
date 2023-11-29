@@ -15,42 +15,16 @@
             <h1>Jackfash</h1>
             <nav>
                 <button onclick="filterCategory('all')">All</button>
-                <button onclick="filterCategory('Tröjor')">Tröjor</button>
-                <button onclick="filterCategory('Byxor')">Byxor</button>
-                <button onclick="filterCategory('Skor')">Skor</button>
-                <button onclick="filterCategory('accessories')">Accessories</button>
+                <button onclick="filterCategory('tröjor')">Tröjor</button>
+                <button onclick="filterCategory('jacka')">Jackor</button>
+                <button onclick="filterCategory('skor')">Skor</button>
+                <button onclick="filterCategory('acc')">Accessories</button>
             </nav>
             <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
         </header>
 
         <main id="productGallery">
-            <div class="product col-2" data-category="Tröjor" data-name="product1">
-                <img src="valpar1.jpg" alt="Product 1">
-                <div class="product-info">
-                    <h2>Product 1</h2>
-
-                    <p class="price">18 000:-</p>
-                    <!-- Inside your product block -->
-                    <a href="#" class="btn-buy" onclick="redirectToBuyPage('productId')">Buy Now</a>
-
-                    <a href="#" class="btn-quality">Quality Check</a>
-                </div>
-            </div>
-
-                <!-- Add more products here -->
-                <div class="product col-2" data-category="Tröjor" data-name="valpar2">
-                    <img src="valpar2.jpg" alt="Product 2">
-                    <div class="product-info">
-                        <h2>valpar2</h2>
-
-                        <p class="price">20 000 :-</p>
-                        <!-- Inside your product block -->
-                        <a href="#" class="btn-buy" onclick="redirectToBuyPage('productId')">Buy Now</a>
-
-                        <a href="#" class="btn-quality">Quality Check</a>
-                    </div>
-                </div>
-
+            <!-- Repeat this block for each product -->
 
                 <div class="product col-2" data-category="Skor" data-name="AF AF1 Air force 1">
                     <img src="airf1.jpg" alt="AF AF1 Air force 1">
@@ -66,7 +40,7 @@
                 </div>
 
 
-                <div class="product col-2" data-category="accessories" data-name="LV Louis Vuitton Bälte">
+                <div class="product col-2" data-category="acc" data-name="LV Louis Vuitton Bälte">
                     <img src="lvbelt.jpg" alt="Louis Vuitton bälte">
                     <div class="product-info">
                         <h2>Louis Vuitton bälte</h2>
@@ -94,13 +68,13 @@
                 </div>
 
 
-                <div class="product col-2" data-category="" data-name="">
-                    <img src="" alt="">
+                <div class="product col-2" data-category="jacka" data-name="moncler cradigan wool">
+                    <img src="monccard.jpg" alt="moncler cradigan">
                     <div class="product-info">
                         <h2> </h2>
 
-                        <p class="price">:-</p>
-                        <p class="price"> </p>
+                        <p class="price">1499:-</p>
+                        <p class="price">finns många olika cardigans </p>
                         <!-- Inside your product block -->
                         <a href="#" class="btn-buy" onclick="redirectToBuyPage('productId')">Buy Now</a>
 
