@@ -62,3 +62,32 @@ function filterProducts(searchTerm = '', category = 'all') {
         }
     }
 }
+let loadedProducts = 0;
+const productsPerLoad = 6; // Number of products to load each time
+
+// Function to simulate loading more products
+function loadMoreProducts() {
+    // Load products logic goes here
+    // For demonstration, we're simply incrementing the loadedProducts count
+    loadedProducts += productsPerLoad;
+
+    // Hide or show products based on loadedProducts
+    let products = document.querySelectorAll('.product');
+    products.forEach((product, index) => {
+        if (index < loadedProducts) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+// Event listener for scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        loadMoreProducts();
+    }
+});
+
+// Initial load of products
+document.addEventListener('DOMContentLoaded', loadMoreProducts);
